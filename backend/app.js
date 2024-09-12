@@ -8,9 +8,9 @@ app.listen(PORT, ()=>{
 });
 
 app.get("/login",(req,res)=>{
-    console.log("Here you have came here on login page!!")
+    console.log("Here you go!");
 });
 
 app.get("/register",(req,res)=>{
-    console.log("Here you have came here on Register page!!")
+    console.log("Here you have came here on Register page!!");
 });

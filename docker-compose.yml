@@ -1,0 +1,15 @@
+# This docker compose is for streamoo application
+name: "streamoo"
+version: 'v0.1'
+services:
+  backend:
+    build: backend/.
+    container_name: backend
+    ports:
+      - 3000:3000           #The first port number here is our host port where we can see it and another is docker virtual port we are port binding here!
+
+  frontend:
+    build: frontend/.
+    container_name: frontend
+    ports:
+      - 5173:5173
