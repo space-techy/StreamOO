@@ -24,8 +24,7 @@ dist-ssr
 *.sw?
 *.env
 .env
-
-mongo_data/
+mongo_data
 
 backend/package-lock.json
 frontend/package-lock.json
