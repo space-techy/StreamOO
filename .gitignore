@@ -22,6 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*.env
+.env
+
+mongo_data/
 
 backend/package-lock.json
 frontend/package-lock.json
