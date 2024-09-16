@@ -1,16 +1,10 @@
 import express from "express";
-
+import router from "./routes/home.js";
 const app = express();
 const PORT = 3000;
 
+app.use("/",router);
+
 app.listen(PORT, ()=>{
-    console.log("Listening on brosasasas : ", PORT);
-});
-
-app.get("/login",(req,res)=>{
-    res.send("<p>bSHsdasdo</p>");
-});
-
-app.get("/register",(req,res)=>{
-    console.log("Here you have came here on Register page!!");
+    console.log(`Listening on ${PORT}`);
 });
