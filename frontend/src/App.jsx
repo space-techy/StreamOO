@@ -1,14 +1,14 @@
 import React from "react";
-import Login from "./login";
-// import Register from "./register";
+import { RouterProvider} from "react-router-dom";
+import router from "./routers";
 
 function App() {
+
   return (
     <>
-      {/* <Register /> */}
-      <Login />
+      <RouterProvider router={router}/>
     </>
   )
 }
 
-export default App
+export default App;

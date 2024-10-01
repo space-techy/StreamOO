@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 function Login(){
@@ -10,7 +11,7 @@ function Login(){
                     <input type="password" placeholder="Password" />
                     <button type="submit">Register</button>
                 </form>
-                <a href="http://localhost:3000/Register">Not Registered? Register Here!</a>
+                <Link to="/Register">Not Registered? Register Here!</Link>
             </div>
         </>
     );
