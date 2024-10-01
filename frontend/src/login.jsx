@@ -9,9 +9,9 @@ function Login(){
                 <form action="/login" method="post">
                     <input type="text" placeholder="Email" />
                     <input type="password" placeholder="Password" />
-                    <button type="submit">Register</button>
+                    <button type="submit">Login</button>
                 </form>
-                <Link to="/Register">Not Registered? Register Here!</Link>
+                <Link to="/register">Not Registered? Register Here!</Link>
             </div>
         </>
     );

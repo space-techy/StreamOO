@@ -5,13 +5,13 @@ function Register(){
     return(
         <>
             <div>
-                <form action="/register" method="post">
+                <form action="/api" method="post">
                     <input type="text" placeholder="Email" />
                     <input type="password" placeholder="Password" />
                     <button type="submit">Register</button>
                 </form>
                 <Link to="/login">Already Registered? Login Then!</Link>
-                
+
             </div>
         </>
     );
