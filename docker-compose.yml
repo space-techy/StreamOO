@@ -6,11 +6,10 @@ services:
     image: mongo
     ports:
       - ${MONGODBPORT}:27017
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: ${MONGOUSER}
-      MONGO_INITDB_ROOT_PASSWORD: ${MONGOPASS}
     volumes:
       - ./mongo_data:/data/db
+    networks:
+      - app-network
   
   mongo-express:
     image: mongo-express
@@ -24,6 +23,8 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: ${MONGOPASS}
       ME_CONFIG_MONGODB_URL: mongodb://${MONGOUSER}:${MONGOPASS}@mongodb:27017/
       ME_CONFIG_BASICAUTH: false
+    networks:
+      - app-network
 
   backend:
     build: backend/.
@@ -41,6 +42,8 @@ services:
             - node_modules/
         - action: rebuild
           path: ./backend/package.json
+    networks:
+      - app-network
 
   frontend:
     build: frontend/.
@@ -56,3 +59,9 @@ services:
             - node_modules/
         - action: rebuild
           path: ./frontend/package.json
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
