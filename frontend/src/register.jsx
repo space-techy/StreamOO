@@ -1,13 +1,20 @@
 import { Link,useNavigate } from "react-router-dom";
-import { useState,useEffect } from "react";
-import { useForm } from "react-hook-form"; 
+import { useState,useEffect, useContext } from "react";
+import { useForm } from "react-hook-form";
+import { AuthContext } from "./auth/Authcontext";
 import axios from "axios";
+
 
 function Register(){
 
     const {register, handleSubmit , formState: {errors}} = useForm();
     const [gotError, addError] = useState('');
+    const { user, login} = useContext(AuthContext);
     const navigate = useNavigate();
+
+    if(user){
+        navigate("/");
+    }
 
     useEffect(()=>{},[gotError]);
 
@@ -20,6 +27,7 @@ function Register(){
         try{
             const response = await axios.post("http://localhost:3000/register",data);
             if(response.data.success){
+                login(response.data.token);
                 navigate("/");
             }
         } catch(error) {

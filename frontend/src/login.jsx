@@ -1,13 +1,19 @@
 import { Link,useNavigate } from "react-router-dom";
-import { useState,useEffect } from "react";
-import { useForm } from "react-hook-form"; 
+import { useState, useEffect, useContext } from "react";
+import { useForm } from "react-hook-form";
+import { AuthContext } from "./auth/Authcontext";
 import axios from "axios";
 
 function Login(){
 
     const {register, handleSubmit , formState: {errors}} = useForm();
     const [gotError, addError] = useState('');
+    const {user, login} = useContext(AuthContext);
     const navigate = useNavigate();
+
+    if(user){
+        navigate("/");
+    }
 
     useEffect(()=>{},[gotError]);
 
@@ -19,6 +25,7 @@ function Login(){
         try{
             const response = await axios.post("http://localhost:3000/login",data);
             if(response.data.success){
+                login(response.data.token);
                 navigate("/");
             }
         } catch(error) {
@@ -49,7 +56,7 @@ function Login(){
                     {errors.password ? <span>Password is required</span>: <></>}
                     <button>Login</button>
                 </form>
-                <Link to="/login">Not Registered? Register </Link>
+                <Link to="/register">Not Registered? Register </Link>
 
             </div>
         </>
