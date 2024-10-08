@@ -7,4 +7,5 @@
 
 :root {
     font-family: 'Roboto', 'Poppins', sans-serif;
+    scrollbar-width: none;
 }

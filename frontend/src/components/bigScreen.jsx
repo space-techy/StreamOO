@@ -1,25 +1,28 @@
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import NavbarWeb from './navbar';
+import { BigScreenEx } from '../ExampleDev/Examples';
+import RowContainer from './rowcontainer';
 
 
 function BigScreen(){
 
+    const props = BigScreenEx;
 
     return(
         <>
             <NavbarWeb />
-            <div className="relative w-screen h-[100vh] bg-cover bg-center" style={{"backgroundImage" : "url(https://occ-0-4957-2186.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABXBVOVKbjfJx3rUK6EcXNFVmGnMml5I7WX2RyEduRi5Yzj_El6lDof1qpSMK5BlJ9TyGxIB2CDjA9b-M5SaMbQ1vLTHf7eOTZl0-.webp?r=f24)"}}>
-                <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" style={{"background" : "linear-gradient(35deg, rgba(9,3,4,1) 30%, rgba(173,0,0,0) 65%)"}}>
+            <div className="relative w-screen h-[100vh] bg-cover bg-center" style={{"backgroundImage" : `url(${props.MovieBgImage})`}}>
+                <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" style={{"background" : "linear-gradient(35deg, rgba(9,3,4,1) 30%, rgba(173,0,0,0) 65%), linear-gradient(0deg, rgba(9,3,4,1) 0%, rgba(9,3,4,0.7) 20%, rgba(9,3,4,0) 40%)"}}>
                     {/* Div for movie name with x and y axis changed manually */}
                     <div className="absolute text-white transform translate-x-[8vw] translate-y-[48vh] w-[25vw]" dir="ltr">
 
                         {/* Movie name with text sized rem */}
-                        <h1 className="text-[3.35rem] font-bold font text-wrap">Sonic The HedgeHog</h1>
+                        <h1 className="text-[3.35rem] font-bold font text-wrap leading-[4rem]">{props.MovieName}</h1>
 
                         {/* Info section with*/}
                         <p className="mt-5">
-                            When a speedy extraterrestrial hedgehog crashes on Earth, he makes a home — but nefarious forces want to capture him. Based on the video game.
+                            {props.MovieInfo}
                         </p>
 
                         {/* Play and Info buttons */}
@@ -38,6 +41,12 @@ function BigScreen(){
                     </div>
                 </div>
             </div>
+            <RowContainer />
+            <RowContainer />
+            <RowContainer />
+            <RowContainer />
+            <RowContainer />
+            <RowContainer />
         </>
     );
 }

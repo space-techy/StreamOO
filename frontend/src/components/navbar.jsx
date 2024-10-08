@@ -1,11 +1,11 @@
-import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 w-full flex justify-between items-center bg-transparent px-8 py-4 z-50">
+    <nav className="fixed top-0 w-full flex justify-between items-center bg-[rgba(0,0,0,0.25)] px-8 py-4 z-50 rounded-2xl">
       {/* Left Section - Logo and Menu Items */}
       <div className="flex items-center space-x-6">
         {/* Logo */}
@@ -14,29 +14,29 @@ const Navbar = () => {
 
         {/* Menu Items */}
         <div className="flex space-x-4 text-white">
-          <a href="#" className="hover:text-gray-400">Home</a>
-          <a href="#" className="hover:text-gray-400">TV Shows</a>
-          <a href="#" className="hover:text-gray-400">Movies</a>
-          <a href="#" className="hover:text-gray-400">New & Popular</a>
-          <a href="#" className="hover:text-gray-400">My List</a>
-          <a href="#" className="hover:text-gray-400">Browse by Languages</a>
+          <Link to="/" className="hover:text-gray-300">Home</Link>
+          <Link to="#" className="hover:text-gray-300">TV Shows</Link>
+          <Link to="#" className="hover:text-gray-300">Movies</Link>
+          <Link to="#" className="hover:text-gray-300">New & Popular</Link>
+          <Link to="#" className="hover:text-gray-300">My List</Link>
+          <Link to="#" className="hover:text-gray-300">Browse by Languages</Link>
         </div>
       </div>
 
       {/* Right Section - Search, Notifications, Profile */}
       <div className="flex items-center space-x-6 text-white">
         {/* Search Icon */}
-        <div className="cursor-pointer hover:text-gray-400">
+        <div className="cursor-pointer hover:text-gray-300">
           <SearchIcon />
         </div>
 
         {/* Notifications Icon */}
-        <div className="cursor-pointer hover:text-gray-400">
+        <div className="cursor-pointer hover:text-gray-300">
           <NotificationsIcon />
         </div>
 
         {/* Profile Icon */}
-        <div className="cursor-pointer hover:text-gray-400">
+        <div className="cursor-pointer hover:text-gray-300">
           <AccountCircleIcon />
         </div>
       </div>
