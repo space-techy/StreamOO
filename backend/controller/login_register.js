@@ -10,12 +10,13 @@ const register = async (req, res) => {
     };
     const newUser = new User(userData);
     try {
+        const userI = await User.find();
         const userInfo = await User.find({ email: data.email });
         if (userInfo.lenght > 0) {
             return res.status(409).json({ message: "Email ID already exists!" });
         } else {
             const tokenData = await newUser.save();
-            return res.status(200).json({ message: "Registered Successfully!", success: true, token: tokenData[0]["_id"] });
+            return res.status(200).json({ message: "Registered Successfully!", success: true, token: tokenData["_id"], username: tokenData["name"] });
         }
     } catch (error) {
         console.log(error);
@@ -30,7 +31,7 @@ const login = async (req, res) => {
     try {
         const userInfo = await User.find({ email: email, password: password });
         if (userInfo.length > 0) {
-            return res.status(200).json({ message: "LoggedIn Successfully", success: true, token: userInfo[0]["_id"] });
+            return res.status(200).json({ message: "LoggedIn Successfully", success: true, token: userInfo["_id"], username: userInfo[0]["name"] });
         } else {
             return res.status(401).json({ message: "Email or Password might be wrong or You may not be registered!" });
         }

@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import ErrorPage from "./error-page";
-import ProtectedRoutes from "./auth/protectedRoute";
-import Login from "./Login";
-import Register from "./Register";
-import Home from "./pages/home";
-import LogoutWay from "./Log_out";
+import ErrorPage from "../pages/error";
+import ProtectedRoutes from "./protectedRoute";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+import Home from "../pages/home";
+import LogoutWay from "../pages/Log_out";
 
 const router = createBrowserRouter([
     {
