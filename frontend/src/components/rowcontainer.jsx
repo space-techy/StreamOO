@@ -1,5 +1,6 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ImageCard from "./ImageCard";
 import Slider from "react-slick";
 
 
@@ -7,11 +8,16 @@ import Slider from "react-slick";
 function RowContainer(){
     const settings = {
         dots: false,
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToShow: 5,
         slidesToScroll: 3,
     };
+
+    const props = {
+        imgSrc: "./images/temo.webp",
+        movieName: "Sonic The HedgeHog",
+    }
     
     return (
         <> 
@@ -20,15 +26,16 @@ function RowContainer(){
                     Movies
                 </div>
                 <Slider {...settings} >
-                        
-                            <img  src="./images/temo.webp" alt="Movie Card" className="pl-[0.2rem] pr-[0.2rem] rounded-xl"/>
-                            <img src="./images/temo.webp" alt="Movie Card" className="pl-[0.2rem] pr-[0.2rem] rounded-xl"/>
-                            <img src="./images/temo.webp" alt="Movie Card" className="pl-[0.2rem] pr-[0.2rem] rounded-xl"/>
-                            <img src="./images/temo.webp" alt="Movie Card" className="pl-[0.2rem] pr-[0.2rem] rounded-xl"/>
-                            <img src="./images/temo.webp" alt="Movie Card" className="pl-[0.2rem] pr-[0.2rem] rounded-xl"/>
-                            <img src="./images/temo.webp" alt="Movie Card" className="pl-[0.2rem] pr-[0.2rem] rounded-xl"/>
-                            <img src="./images/temo.webp" alt="Movie Card" className="pl-[0.2rem] pr-[0.2rem] rounded-xl"/>
-                        
+                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
+                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
+                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
+                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
+                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
+                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
+                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
+                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
+                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
+                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
 
 
                         {/* Hover Card */}
