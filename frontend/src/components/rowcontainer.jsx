@@ -8,7 +8,7 @@ import Slider from "react-slick";
 function RowContainer(){
     const settings = {
         dots: false,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 5,
         slidesToScroll: 3,
@@ -18,6 +18,8 @@ function RowContainer(){
         imgSrc: "./images/temo.webp",
         movieName: "Sonic The HedgeHog",
     }
+
+
     
     return (
         <> 

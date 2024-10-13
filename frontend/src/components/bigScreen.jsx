@@ -1,8 +1,9 @@
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-import NavbarWeb from './navbar';
+import Navbar from './Navbar';
 import { BigScreenEx } from '../ExampleDev/Examples';
-import RowContainer from './rowcontainer';
+import RowContainer from './RowContainer';
+import MoivePopup from './MoivePopup';
 
 
 function BigScreen(){
@@ -11,7 +12,7 @@ function BigScreen(){
 
     return(
         <>
-            <NavbarWeb />
+            <Navbar />
             <div className="relative w-screen h-[100vh] bg-cover bg-center" style={{"backgroundImage" : `url(${props.MovieBgImage})`}}>
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" style={{"background" : "linear-gradient(35deg, rgba(9,3,4,1) 30%, rgba(173,0,0,0) 65%), linear-gradient(0deg, rgba(9,3,4,1) 0%, rgba(9,3,4,0.7) 20%, rgba(9,3,4,0) 40%)"}}>
                     {/* Div for movie name with x and y axis changed manually */}
@@ -41,10 +42,6 @@ function BigScreen(){
                     </div>
                 </div>
             </div>
-            <RowContainer />
-            <RowContainer />
-            <RowContainer />
-            <RowContainer />
             <RowContainer />
             <RowContainer />
         </>

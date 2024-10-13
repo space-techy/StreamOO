@@ -7,4 +7,6 @@ const ImageCard = (props)=>{
     );
 }
 
+
+
 export default ImageCard;
