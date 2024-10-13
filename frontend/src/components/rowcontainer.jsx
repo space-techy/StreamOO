@@ -2,10 +2,27 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ImageCard from "./ImageCard";
 import Slider from "react-slick";
+import { useEffect, useState } from "react";
+import MoivePopup from "./MoivePopup";
 
 
 
 function RowContainer(){
+
+    const [ moviePop, setMoviePop] = useState(false);
+
+    useEffect(()=>{},[moviePop]);
+
+    const openThisMoiveCard = ()=>{
+        setMoviePop(true);
+    }
+
+    const closeThisMoiveCard = ()=>{
+        setMoviePop(false);
+    }
+    
+
+
     const settings = {
         dots: false,
         infinite: true,
@@ -19,25 +36,24 @@ function RowContainer(){
         movieName: "Sonic The HedgeHog",
     }
 
-
-    
     return (
         <> 
+
+            {moviePop && <MoivePopup onClickClose={closeThisMoiveCard} />}    
+
             <div className=" text-white w-full pt-[3vh] pl-[16vh] pb-[5vh] pr-[16vh]"  style={{"background" : "#090304"}}>
                 <div className="text-[2rem] font-bold">
                     Movies
                 </div>
                 <Slider {...settings} >
-                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
-                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
-                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
-                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
-                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
-                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
-                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
-                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
-                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
-                            <ImageCard src={props.imgSrc} movieName={props.movieName}/>
+                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl" onClick={openThisMoiveCard}/>
+                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl" onClick={openThisMoiveCard}/>
+                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl" onClick={openThisMoiveCard}/>
+                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl" onClick={openThisMoiveCard}/>
+                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl" onClick={openThisMoiveCard}/>
+                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl" onClick={openThisMoiveCard}/>
+                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl" onClick={openThisMoiveCard}/>
+                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl" onClick={openThisMoiveCard}/>
 
 
                         {/* Hover Card */}

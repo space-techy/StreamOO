@@ -5,7 +5,6 @@ import { BigScreenEx } from '../ExampleDev/Examples';
 import RowContainer from './RowContainer';
 import MoivePopup from './MoivePopup';
 
-
 function BigScreen(){
 
     const props = BigScreenEx;
