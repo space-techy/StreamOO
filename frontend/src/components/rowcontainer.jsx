@@ -1,6 +1,5 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ImageCard from "./ImageCard";
 import Slider from "react-slick";
 import { useEffect, useState } from "react";
 import MoivePopup from "./MoivePopup";
@@ -21,7 +20,6 @@ function RowContainer(){
         setMoviePop(false);
     }
     
-
 
     const settings = {
         dots: false,
