@@ -2,6 +2,7 @@ import React from 'react';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import HighlightOffRoundedIcon from '@mui/icons-material/HighlightOffRounded';
+import { Link } from 'react-router-dom';
 
 const MoivePopup = ({onClickClose}) => {
 
@@ -21,10 +22,12 @@ const MoivePopup = ({onClickClose}) => {
                         <p>Sonic The HedgeHog</p>
                     </div>
                     <div className='flex mt-8 ml-8 mr-8'>
-                        <button className='flex items-center justify-center bg-white text-black px-4 py-2 rounded-2xl hover:bg-slate-300 transition w-[9vw] min-h-[1vh]'>
-                            <PlayArrowIcon className="mr-2" />
-                                Play
-                        </button>
+                        <Link to="/temp_video">
+                            <button className='flex items-center justify-center bg-white text-black px-4 py-2 rounded-2xl hover:bg-slate-300 transition w-[9vw] min-h-[1vh]'>
+                                <PlayArrowIcon className="mr-2" />
+                                    Play
+                            </button>
+                        </Link>
                         <button className=' flex items-center justify-center  text-white px-4 py-2 w-[9vw]'>
                             <AddCircleOutlineIcon className="mr-2" sx={{fontSize: "2rem"}}/>
                         </button>
