@@ -33,7 +33,7 @@ app.use(cors({ origin: "*" }));
 // To parse json
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/uploads", express.static("./public/uploads"));
+app.use("/public/videos", express.static("./public/videos"));
 
 
 // All routes

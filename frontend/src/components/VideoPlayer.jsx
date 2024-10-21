@@ -68,8 +68,8 @@ const VideoPlayer = ()=>{
           hotkeys: hotkeysFunc,
         },
         sources: [{
-            src: '/videos/Sonic_Trailer.mp4',
-            type: 'video/mp4'
+            src: 'http://localhost:3000/public/videos/76124e5e-f02d-49b4-8acd-fc286a62e1d9/index.m3u8',
+            type: "application/x-mpegURL"
         }],
     };
 
