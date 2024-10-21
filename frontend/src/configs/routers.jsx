@@ -7,6 +7,7 @@ import Register from "../pages/Register";
 import LogoutWay from "../pages/Log_out";
 import VideoPlayer from "../components/VideoPlayer";
 import Account from "../components/Account";
+import MovieUploader from "../components/MovieUploader";
 
 const router = createBrowserRouter([
     {
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
     {
         path: "/account",
         element: <Account />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/upload",
+        element: <MovieUploader />,
         errorElement: <ErrorPage />,
     },
 ]);

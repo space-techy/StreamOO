@@ -44,14 +44,14 @@ function RowContainer(){
                     Movies
                 </div>
                 <Slider {...settings} >
-                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl" onClick={openThisMoiveCard}/>
-                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl" onClick={openThisMoiveCard}/>
-                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl" onClick={openThisMoiveCard}/>
-                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl" onClick={openThisMoiveCard}/>
-                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl" onClick={openThisMoiveCard}/>
-                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl" onClick={openThisMoiveCard}/>
-                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl" onClick={openThisMoiveCard}/>
-                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl" onClick={openThisMoiveCard}/>
+                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl " onClick={openThisMoiveCard}/>
+                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl " onClick={openThisMoiveCard}/>
+                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl " onClick={openThisMoiveCard}/>
+                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl " onClick={openThisMoiveCard}/>
+                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl " onClick={openThisMoiveCard}/>
+                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl " onClick={openThisMoiveCard}/>
+                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl " onClick={openThisMoiveCard}/>
+                            <img  src={props.imgSrc} alt={props.movieName} className="pl-[0.2rem] pr-[0.2rem] rounded-xl " onClick={openThisMoiveCard}/>
 
 
                         {/* Hover Card */}

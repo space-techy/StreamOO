@@ -2,11 +2,14 @@ import multer from "multer";
 import { v4 as uuidv4 } from 'uuid';
 import path from "path";
 
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
+        console.log("Going into this!");
         cb(null, "./public/uploads");
     },
     filename: function (req, file, cb) {
+        console.log("Going into this!");
         const newFileName = file.fieldname + "-" + uuidv4() + path.extname(file.originalname);
         cb(null, newFileName);
     },
