@@ -6,6 +6,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import LogoutWay from "../pages/Log_out";
 import VideoPlayer from "../components/VideoPlayer";
+import Account from "../components/Account";
 
 const router = createBrowserRouter([
     {
@@ -37,7 +38,12 @@ const router = createBrowserRouter([
         path: "/temp_video",
         element: <VideoPlayer />,
         errorElement: <ErrorPage />,
-    }
+    },
+    {
+        path: "/account",
+        element: <Account />,
+        errorElement: <ErrorPage />,
+    },
 ]);
 
 export default router;
