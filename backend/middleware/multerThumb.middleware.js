@@ -1,10 +1,20 @@
 import multer from 'multer';
+import { v4 as uuidv4 } from 'uuid';
+import path from "path";
 
-const storage = multer.memoryStorage();  // Store files in memory (can also use disk storage)
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, "./public/images");
+    },
+    filename: function (req, file, cb) {
+        const newFileName = file.fieldname + "-" + uuidv4() + path.extname(file.originalname);
+        cb(null, newFileName);
+    },
+});
 
 const thumbUpload = multer({
-    storage: storage,
-    limits: { fileSize: 5 * 1024 * 1024 },  // 5MB file size limit
+    storage: storage, // 5MB file size limit
 });
 
 export default thumbUpload;

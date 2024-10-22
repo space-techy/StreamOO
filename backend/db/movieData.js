@@ -14,7 +14,7 @@ const movieSchema = new mongoose.Schema({
         required: [true, "Movie Description is required! "],
     },
     movieThumbnail: { // Make sure this matches the field in the save logic
-        type: Buffer,
+        type: String,
         required: [true, "Movie Thumbnail is required! "],
     },
     movieCaste: {

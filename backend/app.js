@@ -40,6 +40,7 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/public/videos", express.static("./public/videos"));
+app.use("/public/images", express.static("./public/images"));
 
 
 // All routes

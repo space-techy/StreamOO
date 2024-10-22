@@ -26,5 +26,8 @@ dist-ssr
 .env
 mongo_data
 
+backend/public/uploads
+backend/public/videos
+
 backend/package-lock.json
 frontend/package-lock.json

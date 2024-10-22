@@ -33,6 +33,7 @@ function MovieUploader() {
         formData.append("movieDescription", data.movieDescription);
         formData.append("movieURL", videoURL);
         formData.append("movieCaste",data.movieCaste);
+        formData.append("movieReleaseYear", data.movieReleaseYear);
         try{
             console.log(formData);
             const response = await axios.post("http://localhost:3000/upload/movieData", formData, {
@@ -88,7 +89,7 @@ function MovieUploader() {
                     </label>
                     <input
                         type="text"
-                        {...register("movieName", { required: "Movie name is required" })}
+                        {...register("movieName", { required: "Genres are required" })}
                         className="w-full border border-gray-300 p-2 rounded"
                     />
                     {errors.movieName && (
@@ -121,6 +122,20 @@ function MovieUploader() {
                     />
                     {errors.movieGenres && (
                         <span className="text-red-500 text-sm">{errors.movieGenres.message}</span>
+                    )}
+                </div>
+
+                <div>
+                    <label className="block text-sm font-medium mb-1" htmlFor="movieCaste">
+                        Movie Release Year :
+                    </label>
+                    <input
+                        type="text"
+                        {...register("movieReleaseYear", { required: "Release Year is required" })}
+                        className="w-full border border-gray-300 p-2 rounded"
+                    />
+                    {errors.movieReleaseYear && (
+                        <span className="text-red-500 text-sm">{errors.movieReleaseYear.message}</span>
                     )}
                 </div>
 

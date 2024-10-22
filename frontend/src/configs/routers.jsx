@@ -8,6 +8,7 @@ import LogoutWay from "../pages/Log_out";
 import VideoPlayer from "../components/VideoPlayer";
 import Account from "../components/Account";
 import MovieUploader from "../components/MovieUploader";
+import Movies from "../components/Movies";
 
 const router = createBrowserRouter([
     {
@@ -48,6 +49,16 @@ const router = createBrowserRouter([
     {
         path: "/upload",
         element: <MovieUploader />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/movies",
+        element: <Movies />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/tvshows",
+        element: <Movies />,
         errorElement: <ErrorPage />,
     },
 ]);

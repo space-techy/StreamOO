@@ -13,15 +13,12 @@ fileUploader.post("/movieData", thumbUpload.fields([{ name: 'movieThumbnail', ma
         console.log("Starting the upload process...");
 
         var { movieName, movieGenres, movieDescription, movieURL, movieCaste, movieReleaseYear } = req.body;
-        const movieThumbnail = req.files?.movieThumbnail ? req.files.movieThumbnail[0].buffer : null;
-        // Check if thumbnail exists
-        if (!movieThumbnail) {
-            return res.status(400).json({ error: "Movie thumbnail is required" });
-        }
 
-        console.log("Parsed movie data:", { movieName, movieGenres, movieDescription, movieCaste, movieThumbnail });
+        const movieThumbnailPath = `http://localhost:3000/${req.files["movieThumbnail"][0].path}`;
 
-        const videoURL = `http://localhost:3000/public/videos/15d1ba59-3a40-42d8-bdb3-3cb1969f2599/index.m3u8`;
+        console.log(movieThumbnailPath);
+
+        const videoURL = `http://localhost:3000/public/videos/cd46d8a6-8bc2-4898-894e-54be937f935d/index.m3u8`;
 
         if (movieURL === "none") {
             movieURL = videoURL;
@@ -33,7 +30,7 @@ fileUploader.post("/movieData", thumbUpload.fields([{ name: 'movieThumbnail', ma
             movieGenre: movieGenres,
             movieDescription: movieDescription,
             movieCaste: movieCaste,
-            movieThumbnail: movieThumbnail,
+            movieThumbnail: movieThumbnailPath,
             movieURL: movieURL || videoURL,
             movieReleaseYear: movieReleaseYear,
         };

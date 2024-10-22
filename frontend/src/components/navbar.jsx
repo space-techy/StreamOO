@@ -11,15 +11,11 @@ const Navbar = () => {
         {/* Logo */}
         <img src="./images/logo.svg" alt="StreamOO Logo" className="h-8" />
         <p className='text-white font-bold text-[1.25rem]'>StreamOO</p>
-
         {/* Menu Items */}
         <div className="flex space-x-4 text-white">
           <Link to="/" className="hover:text-gray-300">Home</Link>
-          <Link to="#" className="hover:text-gray-300">TV Shows</Link>
-          <Link to="#" className="hover:text-gray-300">Movies</Link>
-          <Link to="#" className="hover:text-gray-300">New & Popular</Link>
-          <Link to="#" className="hover:text-gray-300">My List</Link>
-          <Link to="#" className="hover:text-gray-300">Browse by Languages</Link>
+          <Link to="/tvshows" className="hover:text-gray-300">TV Shows</Link>
+          <Link to="/movies" className="hover:text-gray-300">Movies</Link>
         </div>
       </div>
 
@@ -36,9 +32,11 @@ const Navbar = () => {
         </div>
 
         {/* Profile Icon */}
-        <div className="cursor-pointer hover:text-gray-300">
-          <AccountCircleIcon />
-        </div>
+        <Link to="/account">
+          <div className="cursor-pointer hover:text-gray-300">
+            <AccountCircleIcon />
+          </div>
+        </Link>
       </div>
     </nav>
   );
