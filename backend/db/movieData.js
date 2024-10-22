@@ -21,6 +21,10 @@ const movieSchema = new mongoose.Schema({
         type: String,
         required: [true, "Movie Caste is required!"],
     },
+    movieReleaseYear: {
+        type: String,
+        required: [true, "Movie Release Year is required!"],
+    },
     movieURL: {
         type: String,
     },

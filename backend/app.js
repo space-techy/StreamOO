@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import router from "./routes/user.js";
 import fileUploader from "./routes/uploadFile.js";
+import movieGet from "./routes/getMovies.js";
 
 // Configuring environment variables file location (.env file I am talking about!)
 dotenv.config();
@@ -44,6 +45,7 @@ app.use("/public/videos", express.static("./public/videos"));
 // All routes
 app.use("/", router);
 app.use("/upload", fileUploader);
+app.use("/getMovies", movieGet);
 
 
 // Listening on Port 3000

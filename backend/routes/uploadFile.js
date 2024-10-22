@@ -12,7 +12,7 @@ fileUploader.post("/movieData", thumbUpload.fields([{ name: 'movieThumbnail', ma
     try {
         console.log("Starting the upload process...");
 
-        var { movieName, movieGenres, movieDescription, movieURL, movieCaste } = req.body;
+        var { movieName, movieGenres, movieDescription, movieURL, movieCaste, movieReleaseYear } = req.body;
         const movieThumbnail = req.files?.movieThumbnail ? req.files.movieThumbnail[0].buffer : null;
         // Check if thumbnail exists
         if (!movieThumbnail) {
@@ -21,7 +21,7 @@ fileUploader.post("/movieData", thumbUpload.fields([{ name: 'movieThumbnail', ma
 
         console.log("Parsed movie data:", { movieName, movieGenres, movieDescription, movieCaste, movieThumbnail });
 
-        const videoURL = `http://localhost:3000/public/videos/$76124e5e-f02d-49b4-8acd-fc286a62e1d9/index.m3u8`;
+        const videoURL = `http://localhost:3000/public/videos/15d1ba59-3a40-42d8-bdb3-3cb1969f2599/index.m3u8`;
 
         if (movieURL === "none") {
             movieURL = videoURL;
@@ -34,7 +34,8 @@ fileUploader.post("/movieData", thumbUpload.fields([{ name: 'movieThumbnail', ma
             movieDescription: movieDescription,
             movieCaste: movieCaste,
             movieThumbnail: movieThumbnail,
-            movieURL: movieURL || videoURL,  // Fallback if no URL is provided
+            movieURL: movieURL || videoURL,
+            movieReleaseYear: movieReleaseYear,
         };
 
         // Saving the movie data to the database
