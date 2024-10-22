@@ -28,6 +28,7 @@ mongo_data
 
 backend/public/uploads
 backend/public/videos
+backend/public/images
 
 backend/package-lock.json
 frontend/package-lock.json
