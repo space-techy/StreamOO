@@ -1,27 +1,28 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useEffect } from "react";
 
 function MovieUploader() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const navigate = useNavigate();
-
   const uploadMovie = async (data) => {
     try {
-        var videoURL = `http://localhost:3000/public/videos/$76124e5e-f02d-49b4-8acd-fc286a62e1d9/index.m3u8`;
+        var videoURL = "none";
         if((data.movieVideo).length > 0){
             console.log("Here!!!!");
             const movieData = new FormData();
-            movieData.append("moiveVideo",data.movieVideo);
+            movieData.append("movieVideo",data.movieVideo[0]);
+            console.log(movieData);
             const newResponse = await axios.post("http://localhost:3000/upload",movieData,{
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
             });
-            if(response.status == 200){
-                videoURL = response.data.videoURL;
+            if(newResponse.status == 200){
+                videoURL = newResponse.data.videoURL;
             } else {
-                alert("Some error Occured", response.error);
+                alert("Some error Occured", newResponse.error);
             }
         }
 
@@ -32,25 +33,33 @@ function MovieUploader() {
         formData.append("movieDescription", data.movieDescription);
         formData.append("movieURL", videoURL);
         formData.append("movieCaste",data.movieCaste);
+        try{
+            console.log(formData);
+            const response = await axios.post("http://localhost:3000/upload/movieData", formData, {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                },
+            });
 
-        console.log(formData);
-        const response = await axios.post("http://localhost:3000/upload/movieData", formData, {
-            headers: {
-                "Content-Type": "multipart/form-data",
-            },
-        });
-
-        if(response.status == 200){
-            alert("Movie Uploaded successfully!");
-            navigate("/");
-        } else {
-            alert("Some error Occured please retry!",response.error);
+            if(response.status == 200){
+                alert("Movie Uploaded successfully!");
+                navigate("/");
+            } else {
+                alert("Some error Occured please retry!",response.error);
+            }
+        } catch(error) {
+            console.error("Upload failed:", error);
+            alert("Failed to upload movie. Please try again.");
         }
     } catch (error) {
         console.error("Upload failed:", error);
         alert("Failed to upload movie. Please try again.");
     }
   };
+
+//   useEffect(()=>{
+//     console.log(formData)
+//   },[formData])
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">

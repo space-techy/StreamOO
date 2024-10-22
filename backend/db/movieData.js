@@ -13,19 +13,19 @@ const movieSchema = new mongoose.Schema({
         type: String,
         required: [true, "Movie Description is required! "],
     },
-    moveThumbnail: {
+    movieThumbnail: { // Make sure this matches the field in the save logic
         type: Buffer,
-        required: [true, "Movie Image or Thumbnail is required! "],
+        required: [true, "Movie Thumbnail is required! "],
     },
     movieCaste: {
         type: String,
-        required: [true, "Movie Caster is required!"],
+        required: [true, "Movie Caste is required!"],
     },
     movieURL: {
         type: String,
     },
 });
 
-const Movie = mongoose.model("Moive", movieSchema);
+const Movie = mongoose.model("Movie", movieSchema);
 
 export default Movie;

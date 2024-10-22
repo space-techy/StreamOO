@@ -27,7 +27,12 @@ const PORT = 3000;
 
 
 // CORs use for localhost api request
-app.use(cors({ origin: "*" }));
+app.use(cors({
+    origin: '*', // Allow all origins
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed methods
+    preflightContinue: false,
+    optionsSuccessStatus: 204 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+}));
 
 
 // To parse json

@@ -1,12 +1,14 @@
 import { useRef, useState } from "react";
 import VideoPlayerCard from "./VideoPlayerCard";
 import { flexbox, height, width } from "@mui/system";
+import { useLocation } from "react-router-dom";
 
 
 const VideoPlayer = ()=>{
     const playerRef = useRef(null);
     const [playing, setPlaying] = useState(false);
-
+    const location = useLocation();
+    const { movieURL } = location.state || {};
 
     const hotkeysFunc = (event)=>{
       const player = playerRef.current;
@@ -68,7 +70,7 @@ const VideoPlayer = ()=>{
           hotkeys: hotkeysFunc,
         },
         sources: [{
-            src: 'http://localhost:3000/public/videos/76124e5e-f02d-49b4-8acd-fc286a62e1d9/index.m3u8',
+            src: movieURL,
             type: "application/x-mpegURL"
         }],
     };

@@ -40,8 +40,8 @@ services:
             - node_modules/
         - action: rebuild
           path: ./backend/package.json
-    # volumes:
-    #   - ./backend/public:/app/backend/public
+    volumes:
+      - ./backend/public:/app/backend/public
     # This has some bug which is not working!
     networks:
       - app-network
