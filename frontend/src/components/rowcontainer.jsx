@@ -51,16 +51,16 @@ function RowContainer() {
                     {movieData.map((movie) => (
                         <div
                             key={movie._id}
-                            className="relative group flex-shrink-0 pl-[0.2rem] pr-[0.2rem] rounded-xl transition-transform duration-300 ease-in-out"
+                            className="relative group flex-shrink-0 pl-[0.4rem] pr-[0.4rem] rounded-xl transition-transform duration-300 ease-in-out"
                             onClick={() => openThisMovieCard(movie)}
                         >
                             <img
                                 src={movie.movieThumbnail}
                                 alt={movie.movieName}
-                                className="rounded-xl object-cover transition-transform duration-300 ease-in-out group-hover:scale-105" // Scaling image on hover
+                                className="rounded-xl h-[200px] w-[300px] object-cover transition-transform duration-300 ease-in-out group-hover:scale-105" // Scaling image on hover
                             />
                             <div
-                                className="absolute inset-0 flex flex-col justify-end items-center bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out rounded-xl" // Adjusted overlay with a bottom gradient
+                                className="absolute inset-0 flex flex-col justify-end items-center bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out rounded-xl scale-105" // Adjusted overlay with a bottom gradient
                             >
                                 <h3 className="text-white font-bold text-lg mb-2 px-2 text-center">{movie.movieName}</h3>
                                 <div className="flex space-x-2 mb-4">

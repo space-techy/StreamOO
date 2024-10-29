@@ -58,7 +58,7 @@ const VideoPlayer = ()=>{
         controls: true,
         responsive: true,
         fluid: false,
-        disablePictureInPicture: true,
+        disablePictureInPicture: false,
         playbackRates: [0,0.5,1,1.5,2],
         controlBar : {
           skipButtons: {

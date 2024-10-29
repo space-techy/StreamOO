@@ -12,7 +12,7 @@ const MoivePopup = ({ movie, onClickClose}) => {
                 <div className='absolute h-full w-full' onClick={onClickClose}></div>
                 <div className='absolute transform translate-x-[52%] translate-y-[7%] w-[50vw] rounded-xl bg-[#0a0405] '>
                     <div className="relative rounded-xl h-[65vh] w-full">
-                        <img src={movie.movieThumbnail} alt={ movie.movieName } className='absolute h-full object-cover rounded-xl'/>
+                        <img src={movie.movieThumbnail} alt={ movie.movieName } className='absolute h-full object-cover w-full rounded-xl'/>
                         <div className='absolute h-full w-full object-cover' style={{
                             backgroundImage: "linear-gradient(to top, rgba(9,3,4,1), rgba(9,3,4,0.1), rgba(9,3,4,0))"
                         }}></div>
@@ -48,7 +48,7 @@ const MoivePopup = ({ movie, onClickClose}) => {
                                     <div className='font-bold text-[1.25rem] mb-[0.75rem]'>
                                         Cast
                                     </div>
-                                    <div className='text-[1rem] text-wrap'>
+                                    <div className='text-[1rem] text-wrap w-[7.5rem]'>
                                         { movie.movieCaste }
                                     </div>
                                 </div>
