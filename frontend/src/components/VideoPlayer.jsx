@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import VideoPlayerCard from "./VideoPlayerCard";
 import { flexbox, height, width } from "@mui/system";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const VideoPlayer = ()=>{
@@ -9,6 +10,7 @@ const VideoPlayer = ()=>{
     const [playing, setPlaying] = useState(false);
     const location = useLocation();
     const { movieURL } = location.state || {};
+    const navigate = useNavigate();
 
     const hotkeysFunc = (event)=>{
       const player = playerRef.current;
@@ -89,7 +91,12 @@ const VideoPlayer = ()=>{
 
     return (
         <>
-            <VideoPlayerCard options={videoPlayerOptions} onReady={handlePlayerReady}/>
+          <button onClick={()=>{
+            navigate(-1);
+          }}>
+            <p>Go Back</p>
+          </button>
+          <VideoPlayerCard options={videoPlayerOptions} onReady={handlePlayerReady}/>
         </>
     );
 }
