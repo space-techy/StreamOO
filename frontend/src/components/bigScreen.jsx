@@ -3,7 +3,6 @@ import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import Navbar from './navbar';
 import { BigScreenEx } from '../ExampleDev/Examples';
 import RowContainer from './rowContainer';
-import MoivePopup from './MoivePopup';
 
 function BigScreen(){
 
