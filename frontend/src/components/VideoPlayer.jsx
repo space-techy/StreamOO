@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import VideoPlayerCard from "./videoPlayerCard";
+import VideoPlayerCard from "./VideoPlayerCard";
 import { flexbox, height, width } from "@mui/system";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
