@@ -10,7 +10,7 @@ RUN npm install -g nodemon
 # To install ffmpeg for movies
 RUN set -x
 RUN apt-get update
-RUN apt-get dist-upgrade
+RUN apt-get -y dist-upgrade
 RUN apt-get install -y --no-install-recommends ffmpeg  
 
 # Setting up volumes to be sudo
