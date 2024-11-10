@@ -28,7 +28,7 @@ function Login(){
             password: info.password,
         }
         try{
-            const response = await axios.post(`${VITE_MOVIE_UPLOAD_URL}/login`,data);
+            const response = await axios.post(`${import.meta.env.VITE_MOVIE_UPLOAD_URL}/login`,data);
             if(response.data.success){
                 login(response.data.token, response.data.username);
                 navigate("/", {replace: true});
