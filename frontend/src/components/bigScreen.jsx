@@ -5,9 +5,7 @@ import { BigScreenEx } from '../ExampleDev/Examples';
 import RowContainer from './rowContainer';
 
 function BigScreen(){
-
     const props = BigScreenEx;
-
     return(
         <>
             <Navbar />
