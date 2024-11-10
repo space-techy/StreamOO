@@ -7,7 +7,7 @@ import axios from "axios";
 import { Play, Info } from "lucide-react"; // Importing icons
 import { Link } from "react-router-dom";
 
-function RowContainer() {
+function rowContainer() {
     const [moviePop, setMoviePop] = useState(false);
     const [selectedMovie, setSelectedMovie] = useState(null);
     const [movieData, setMovieData] = useState([]);
@@ -222,4 +222,4 @@ function RowContainer() {
     );
 }
 
-export default RowContainer;
+export default rowContainer;
