@@ -28,7 +28,7 @@ function Register(){
             password: info.password,
         }
         try{
-            const response = await axios.post("http://localhost:3000/register",data);
+            const response = await axios.post(`${VITE_MOVIE_UPLOAD_URL}/register`,data);
             if(response.data.success){
                 login(response.data.token, response.data.username);
                 navigate("/",{replace: true});

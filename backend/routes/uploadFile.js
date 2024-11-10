@@ -14,11 +14,11 @@ fileUploader.post("/movieData", thumbUpload.fields([{ name: 'movieThumbnail', ma
 
         var { movieName, movieGenres, movieDescription, movieURL, movieCaste, movieReleaseYear } = req.body;
 
-        const movieThumbnailPath = `http://localhost:3000/${req.files["movieThumbnail"][0].path}`;
+        const movieThumbnailPath = `${process.env.MOVIE_UPLOAD_URL}/${req.files["movieThumbnail"][0].path}`;
 
         console.log(movieThumbnailPath);
 
-        const videoURL = `http://localhost:3000/public/videos/cd46d8a6-8bc2-4898-894e-54be937f935d/index.m3u8`;
+        const videoURL = `${process.env.MOVIE_UPLOAD_URL}/public/videos/cd46d8a6-8bc2-4898-894e-54be937f935d/index.m3u8`;
 
         if (movieURL === "none") {
             movieURL = videoURL;
@@ -78,7 +78,7 @@ fileUploader.post("/", upload.fields([{ name: "movieVideo", maxCount: 1 }]), asy
             console.log(`stdout: ${stdout}`);
             console.log(`stderr: ${stderr}`);
         });
-        const videoURL = `http://localhost:3000/public/videos/${videoId}/index.m3u8`;
+        const videoURL = `${process.env.MOVIE_UPLOAD_URL}/public/videos/${videoId}/index.m3u8`;
         console.log("hsj here!");
         res.status(200).json({ videoURL: videoURL });
 

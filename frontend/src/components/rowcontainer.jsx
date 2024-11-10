@@ -15,7 +15,7 @@ function RowContainer() {
     useEffect(() => {
         const fetchMovies = async () => {
             try {
-                const movies = await axios.get("http://localhost:3000/getMovies");
+                const movies = await axios.get(`${VITE_MOVIE_UPLOAD_URL}/getMovies`);
                 setMovieData(movies.data);
             } catch (error) {
                 console.log(error);

@@ -14,7 +14,7 @@ function MovieUploader() {
             const movieData = new FormData();
             movieData.append("movieVideo",data.movieVideo[0]);
             console.log(movieData);
-            const newResponse = await axios.post("http://localhost:3000/upload",movieData,{
+            const newResponse = await axios.post(`${VITE_MOVIE_UPLOAD_URL}/upload`,movieData,{
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
@@ -36,7 +36,7 @@ function MovieUploader() {
         formData.append("movieReleaseYear", data.movieReleaseYear);
         try{
             console.log(formData);
-            const response = await axios.post("http://localhost:3000/upload/movieData", formData, {
+            const response = await axios.post(`${VITE_MOVIE_UPLOAD_URL}/upload/movieData`, formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
