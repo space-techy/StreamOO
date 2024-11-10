@@ -5,10 +5,10 @@ import Home from "../pages/home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import LogoutWay from "../pages/Log_out";
-import VideoPlayer from "../components/VideoPlayer";
-import Account from "../components/Account";
-import MovieUploader from "../components/MovieUploader";
-import Movies from "../components/Movies";
+import VideoPlayer from "../components/videoPlayer";
+import Account from "../components/account";
+import MovieUploader from "../components/movieUploader";
+import Movies from "../components/movies";
 
 const router = createBrowserRouter([
     {

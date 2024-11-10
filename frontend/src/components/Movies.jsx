@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import MoivePopup from "./MoivePopup";
+import MoivePopup from "./moivePopup";
 import axios from "axios";
 import { Play, Info } from "lucide-react"; // Importing icons
 import { Link } from "react-router-dom";
