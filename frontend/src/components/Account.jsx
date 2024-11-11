@@ -104,6 +104,11 @@ const Account = () => {
               Logout
             </button>
           </div>
+          <button onClick={()=>{
+            navigate("/upload");
+          }}>
+            To Upload
+          </button>
         </div>
       </div>
     </div>
