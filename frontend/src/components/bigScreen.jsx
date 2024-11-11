@@ -1,8 +1,8 @@
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-import Navbar from './navbar';
+import Navbar from './Navbar';
 import { BigScreenEx } from '../ExampleDev/Examples';
-import rowContainer from './RowContainer';
+import RowContainer from './RowContainer';
 
 function BigScreen(){
     const props = BigScreenEx;
@@ -38,10 +38,10 @@ function BigScreen(){
                     </div>
                 </div>
             </div>
-            <rowContainer />
-            <rowContainer />
-            <rowContainer />
-            <rowContainer />
+            <RowContainer />
+            <RowContainer />
+            <RowContainer />
+            <RowContainer />
         </>
     );
 }
