@@ -3,7 +3,7 @@ import MoivePopup from "./MoivePopup";
 import axios from "axios";
 import { Play, Info } from "lucide-react"; // Importing icons
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
+import Navbar from "./navbar";
 
 function Movies() {
     const [moviePop, setMoviePop] = useState(false);
