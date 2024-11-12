@@ -14,7 +14,7 @@ function MovieUploader() {
             const movieData = new FormData();
             movieData.append("movieVideo",data.movieVideo[0]);
             console.log(movieData);
-            const newResponse = await axios.post(`${import.meta.env.VITE_MOVIE_UPLOAD_URL}/upload`,movieData,{
+            const newResponse = await axios.post(`${'https://streamoo-backend.spacetechy.engineer/'}/upload`,movieData,{
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
@@ -36,7 +36,7 @@ function MovieUploader() {
         formData.append("movieReleaseYear", data.movieReleaseYear);
         try{
             console.log(formData);
-            const response = await axios.post(`${import.meta.env.VITE_MOVIE_UPLOAD_URL}/upload/movieData`, formData, {
+            const response = await axios.post(`${'https://streamoo-backend.spacetechy.engineer/'}/upload/movieData`, formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },

@@ -15,7 +15,7 @@ function RowContainer() {
     useEffect(() => {
         const fetchMovies = async () => {
             try {
-                const movies = await axios.get(`${import.meta.env.VITE_MOVIE_UPLOAD_URL}/getMovies`);
+                const movies = await axios.get(`${'https://streamoo-backend.spacetechy.engineer/'}/getMovies`);
                 setMovieData(movies.data);
             } catch (error) {
                 console.log(error);

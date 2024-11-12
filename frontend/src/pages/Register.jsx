@@ -28,8 +28,8 @@ function Register(){
             password: info.password,
         }
         try{
-            const response = await axios.post(`${import.meta.env.VITE_MOVIE_UPLOAD_URL}/register`,data);
-            console.log(import.meta.env.VITE_MOVIE_UPLOAD_URL);
+            const response = await axios.post(`${'https://streamoo-backend.spacetechy.engineer/'}/register`,data);
+            console.log('https://streamoo-backend.spacetechy.engineer/');
             if(response.data.success){
                 login(response.data.token, response.data.username);
                 navigate("/",{replace: true});
