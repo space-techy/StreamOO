@@ -1,4 +1,4 @@
-import BigScreen from "../components/bigScreen";
+import BigScreen from "../components/BigScreen";
 
 function Home(){
 
