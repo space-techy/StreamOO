@@ -32,3 +32,4 @@ backend/public/images
 
 backend/package-lock.json
 frontend/package-lock.json
+.vercel
