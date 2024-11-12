@@ -11,6 +11,7 @@ const VideoPlayer = ()=>{
     const location = useLocation();
     const { movieURL } = location.state || {};
     const navigate = useNavigate();
+    console.log(movieURL);
 
     const hotkeysFunc = (event)=>{
       const player = playerRef.current;

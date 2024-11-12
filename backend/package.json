@@ -5,11 +5,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "build": "node "
   },
   "author": "Mr. Nikhil Patil",
   "license": "ISC",
   "dependencies": {
+    "@vercel/blob": "^0.26.0",
     "axios": "^1.7.7",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",

@@ -86,6 +86,11 @@ fileUploader.post("/", upload.fields([{ name: "movieVideo", maxCount: 1 }]), asy
         console.log("Error here going back!");
         res.status(500).json({ error: error });
     }
+
+
+
+
+    
 });
 
 export default fileUploader;
