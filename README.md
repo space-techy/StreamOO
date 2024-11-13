@@ -79,18 +79,21 @@ streamoo/
 2.  **Set up environment variables**
 
     -   Refer to the [Environment Variables](#-environment-variables) section and create `.env` files in both the backend and frontend directories.
-3.  **Build and run Docker containers**
+3.  **Run Docker containers**
 
+    `docker compose up --watch `
     
-
-    
-
-    `docker-compose up --build`
+    This will start docker container and whenever a change is made you won't need to restart it.
 
 4.  **Access the application**
 
     -   Frontend: `http://localhost:5173`
     -   Backend API: `http://localhost:3000`
+   
+5.  **Stop Docker Containers**
+
+    `docker compose up down`
+   
 
 🔑 Environment Variables
 ------------------------
@@ -134,11 +137,8 @@ MOVIE_UPLOAD_URL=http://localhost:3000
 
 1.  **Run Docker Compose**
 
-    
 
-    
-
-    `docker-compose up`
+    `docker compose up --watch`
 
 2.  **Access the Application**:
 
