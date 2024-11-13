@@ -67,9 +67,9 @@ streamoo/
 
 1.  **Clone the repository**
 
-    bash
+    
 
-    Copy code
+    
 
     ```
     git clone https://github.com/yourusername/streamoo.git
@@ -81,9 +81,9 @@ streamoo/
     -   Refer to the [Environment Variables](#-environment-variables) section and create `.env` files in both the backend and frontend directories.
 3.  **Build and run Docker containers**
 
-    bash
+    
 
-    Copy code
+    
 
     `docker-compose up --build`
 
@@ -97,9 +97,9 @@ streamoo/
 
 ### 🌍 Global Variables (Docker Compose)
 
-plaintext
 
-Copy code
+
+
 
 ```
 MONGOUSER=root
@@ -112,17 +112,17 @@ FRONTENDPORT=5173
 
 ### 🖥️ Frontend `.env`
 
-plaintext
 
-Copy code
+
+
 
 `VITE_MOVIE_UPLOAD_URL=http://localhost:3000`
 
 ### 🗄️ Backend `.env`
 
-plaintext
 
-Copy code
+
+
 
 ```
 MONGODB_URI=mongodb://root:root@mongodb:27017/streamoo?authSource=admin
@@ -134,9 +134,9 @@ MOVIE_UPLOAD_URL=http://localhost:3000
 
 1.  **Run Docker Compose**
 
-    bash
+    
 
-    Copy code
+    
 
     `docker-compose up`
 
