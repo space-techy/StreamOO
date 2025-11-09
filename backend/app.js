@@ -25,7 +25,7 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
 const app = express();
 const PORT = 3000;
 
-const ORIGIN = process.env.FRONTEND;
+const ORIGIN = "https://stream-oo-omega.vercel.app/";
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", ORIGIN);
