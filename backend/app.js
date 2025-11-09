@@ -33,6 +33,7 @@ app.use(cors({
     optionsSuccessStatus: 204 // Some legacy browsers (IE11, various SmartTVs) choke on 204
 }));
 
+app.options("*", cors());
 
 // To parse json
 app.use(express.json());
