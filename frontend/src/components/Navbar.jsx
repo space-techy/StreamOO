@@ -9,7 +9,7 @@ const Navbar = () => {
       {/* Left Section - Logo and Menu Items */}
       <div className="flex items-center space-x-6">
         {/* Logo */}
-        <img src="./images/logo.svg" alt="StreamOO Logo" className="h-8" />
+        <img src="/images/logo.svg" alt="StreamOO Logo" className="h-8" />
         <p className='text-white font-bold text-[1.25rem]'>StreamOO</p>
         {/* Menu Items */}
         <div className="flex space-x-4 text-white">
