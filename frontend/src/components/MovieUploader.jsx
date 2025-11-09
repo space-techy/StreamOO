@@ -36,11 +36,7 @@ function MovieUploader() {
         formData.append("movieReleaseYear", data.movieReleaseYear);
         try{
             console.log(formData);
-            const response = await axios.post(`${import.meta.env.VITE_MOVIE_UPLOAD_URL }/upload/movieData`, formData, {
-                headers: {
-                    "Content-Type": "multipart/form-data",
-                },
-            });
+            const response = await axios.post(`${import.meta.env.VITE_MOVIE_UPLOAD_URL}/upload/movieData`, formData);
 
             if(response.status == 200){
                 alert("Movie Uploaded successfully!");
