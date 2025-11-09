@@ -57,7 +57,7 @@ function Login(){
             <div className="flex flex-col justify-center items-center h-[100vh] text-white" style={{ "background":" radial-gradient(circle at center, rgba(65,74,92,1) 5%, rgba(0,0,0,1) 80%)"}}>
                 <div className="flex h-[80vh] flex-col justify-center px-6 py-12 lg:px-8 w-[25vw] bg-[rgba(0,0,0,0.5)] rounded-xl border-2 border-slate-600 ">
                     <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                        <img className="mx-auto h-10 w-auto" src="./images/logo.svg" alt="StreamOO" />
+                        <img className="mx-auto h-10 w-auto" src="/images/logo.svg" alt="StreamOO" />
                         <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight ">Sign in to your account</h2>
                     </div>
                     <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm text-white">
