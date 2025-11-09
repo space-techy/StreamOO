@@ -10,6 +10,7 @@ dotenv.config();
 
 // Mongoose Setup
 const mongoURI = process.env.MONGODB_URI;
+const ORIGIN = process.env.FRONTEND;
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
@@ -27,7 +28,7 @@ const PORT = 3000;
 
 // CORs use for localhost api request
 app.use(cors({
-    origin: '*', // Allow all origins
+    origin: ORIGIN, // Allow all origins
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed methods
     preflightContinue: false,
     optionsSuccessStatus: 204 // Some legacy browsers (IE11, various SmartTVs) choke on 204
