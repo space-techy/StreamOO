@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import ErrorPage from "../pages/error";
 import ProtectedRoutes from "./protectedRoute";
 import Home from "../pages/home";
@@ -10,7 +10,7 @@ import Account from "../components/Account";
 import MovieUploader from "../components/MovieUploader";
 import Movies from "../components/Movies";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: (
