@@ -24,14 +24,16 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 const app = express();
 const PORT = 3000;
+const __dirname = path.resolve();
+
 
 app.use(cors({ origin: true, credentials: true }));
 app.options("*", cors({ origin: true, credentials: true }));
 // To parse json
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/public/videos", express.static("/videos"));
-app.use("/public/images", express.static("/images"));
+app.use("/public/images", express.static(path.join(__dirname, "public/images")));
+app.use("/public/videos", express.static(path.join(__dirname, "public/videos")));
 
 
 // All routes
