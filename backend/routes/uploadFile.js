@@ -13,8 +13,8 @@ fileUploader.post("/movieData", thumbUpload.fields([{ name: 'movieThumbnail', ma
         console.log("Starting the upload process...");
 
         var { movieName, movieGenres, movieDescription, movieURL, movieCaste, movieReleaseYear } = req.body;
-
-        const movieThumbnailPath = `${process.env.MOVIE_UPLOAD_URL}/${req.files["movieThumbnail"][0].path}`;
+        const thumbnailFilePath = req.files["movieThumbnail"][0];
+        const movieThumbnailPath = `${process.env.MOVIE_UPLOAD_URL}/public/images/${thumbnailFilePath.filename}`;
 
         console.log(movieThumbnailPath);
 
