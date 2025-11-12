@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import router from "./routes/user.js";
 import fileUploader from "./routes/uploadFile.js";
 import movieGet from "./routes/getMovies.js";
+import path from "path";
 // Configuring environment variables file location (.env file I am talking about!)
 dotenv.config();
 
